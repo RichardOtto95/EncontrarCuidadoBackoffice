@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="back_office">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>back_office</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2//firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-functions.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            // // encontrar-cuidado-dev
+            // apiKey: "AIzaSyDPte8_4yee7dcqAI59TSSZL4xgo0OG5DU",
+            // authDomain: "encontrar-cuidado-dev.firebaseapp.com",
+            // projectId: "encontrar-cuidado-dev",
+            // storageBucket: "encontrar-cuidado-dev.appspot.com",
+            // messagingSenderId: "245406601815",
+            // appId: "1:245406601815:web:22638caa7fe17186728912",
+            // measurementId: "G-MT5NN22RJK"
+
+
+            // encontrar-cuidado-project
+            apiKey: "AIzaSyCGZBwEZLszkajb2e4__gM8SeKrWJAD26Y",
+            authDomain: "encontrar-cuidado-project.firebaseapp.com",
+            projectId: "encontrar-cuidado-project",
+            storageBucket: "encontrar-cuidado-project.appspot.com",
+            messagingSenderId: "136807747147",
+            appId: "1:136807747147:web:ffd9934be4b4fc129947ce",
+            measurementId: "G-27HYXCLS5G"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.6.2/firebase-analytics.js"></script>
+    <!-- Initialize Firebase -->
+    <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('flutter-first-frame', function() {
+                navigator.serviceWorker.register('flutter_service_worker.js');
+            });
+        }
+    </script>
+    <script src="main.dart.js" type="application/javascript"></script>
+</body>
+
+</html>
